@@ -1,5 +1,5 @@
-import DropZone from "./DropZone.js";
-import ProgramAPI from "../api/programapi.js";
+import DropZone from "DropZone.js";
+import ProgramAPI from "./api/programapi.js";
 
 export default class Item {
 	constructor(id, content) {
