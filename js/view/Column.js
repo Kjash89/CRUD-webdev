@@ -40,6 +40,7 @@ export default class Column{
             </div>
         `).children[0];
     }
+    
     renderItem(data) {
         const item = new Item(data.id, data.content);
         
