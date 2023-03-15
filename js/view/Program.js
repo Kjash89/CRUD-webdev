@@ -1,7 +1,7 @@
-import Column from "./Column.js";
+import Column from "Column.js";
 
 export default class Program {
-    constructor(root){
+    constructor(root) {
         this.root = root;
 
         Program.columns().forEach(column => {
@@ -14,15 +14,15 @@ export default class Program {
     static columns() {
         return [
             {
-                id:1,
+                id: 1,
                 title: "Not Started"
             },
             {
-                id:2,
+                id: 2,
                 title: "In Progress"
             },
             {
-                id:3,
+                id: 3,
                 title: "Completed"
             }
         ];
