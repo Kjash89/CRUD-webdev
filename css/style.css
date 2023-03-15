@@ -17,24 +17,41 @@ body{
     display:grid;
     height: 100vh;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: 10% 90% ;
+    grid-template-rows: 5% 95% ;
     grid-template-areas: 
     "alias-header alias-header"
     "alias-section alias-program";
 }
+
+.contents.active{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 5% 90% ;
+    grid-template-areas: 
+    "alias-header alias-header"
+    "alias-program alias-program";
+}
 header{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
     grid-area: alias-header;
     background-image: linear-gradient(left to right);
+    background-color: rgba(0,0 , 0, 0.75);
+  
 }
 .navbar{
-    display: flex;
-    background-color: lightslategray;
+    
 
 }
+.navbar ul{
+    display: flex;
+    
+}
 .nav-link{
-    display: flex; 
-    margin: 10px;
-    align-content: center;
+    margin-left: 10px;
+
 }
 .section{
     grid-area:alias-section;
@@ -45,13 +62,14 @@ header{
     display: flex;
     padding: 30px;
     background-image: linear-gradient(blue, cyan);
+    overflow: scroll;
 }
 .program *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .program__column{
-    flex: 1;
-    border-radius: 10px;
+    width: 250px;
+    border-radius: 20px;
     border: solid grey;
 }
 .program__column:not(:last-child){
@@ -61,27 +79,33 @@ header{
     text-align: center;
     border: solid;
     margin-bottom:20px;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 16px;
+    border-radius: 15px;
     color: white;
     user-select: none;
 
 }
+.program__item{
+    display: flex;
+    padding: 3px;
+}
 .program__add-item {
 	width: 100%;
-	padding: 10px 0;
+	padding: 5px ;
 	font-size: 16px;
 	color: white;
 	background: rgba(0, 0, 0, 0.1);
 	border: none;
-	border-radius: 5px;
+	border-radius: 8px;
 	cursor: pointer;
 }
 
 .program__item-input{
-    padding:10px 15px;
+    padding:5px;
+    width: 100%;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: rgb(128, 128, 128, .75);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -98,8 +122,11 @@ header{
 }
 
 .delete__button{
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 2px;
+    border-radius: 10px;
+}
+
+.to-do__list{
+    display: flex;
 }

@@ -33,7 +33,7 @@ export default class Item {
 			const check = confirm("Are you sure you want to delete this item?");
 
 			if (check) {
-				ProgramAPI.deleteItem(itemid);
+				ProgramAPI.deleteItem(Item);
 
 				this.elements.input.removeEventListener("blur", onBlur);
 				this.elements.root.parentElement.removeChild(this.elements.root);
@@ -56,7 +56,7 @@ export default class Item {
 
 		return range.createContextualFragment(`
 			<div class="program__item" draggable="true">
-				<div class="program__item-input" contenteditable><button class="delete__button" type="button"> - </button></div>
+				<div class="program__item-input" contenteditable></div><i class="fa-solid fa-trash-xmark delete__button"></i>
 			</div>
 		`).children[0];
 	}

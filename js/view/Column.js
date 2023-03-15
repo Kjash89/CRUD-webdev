@@ -36,7 +36,7 @@ export default class Column{
             <div class="program__column">
                 <div class="program__column-title"></div>
                 <div class="program__column-items"></div>
-                <button class="program__add-item" type="button"> + Add</button>
+                <button class="program__add-item" type="button"><a class="fa-regular fa-pen-to-square"></a></button>
             </div>
         `).children[0];
     }
